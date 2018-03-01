@@ -1,0 +1,64 @@
+.body {
+    background: url("../images/stadium.jpeg");
+    background-size: 107%;
+   text-align: center;
+	font-family: 'Francois One', sans-serif;
+	color: white;
+}
+
+.pt1 {
+    background-color: green;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 1%;
+}
+
+.done {
+    color: blue;
+}
+
+.showpopup
+    {
+        position:absolute;
+        top: 0%;
+        left: 0%;
+    
+        height:50%;
+        margin-top: 10%; /*set to a negative number 1/2 of your height*/
+        margin-left:10%; /*set to a negative number 1/2 of your width*/
+        margin-right: 10%;
+        /*
+        z- index must be lower than pop up box
+       */
+        z-index: 99;
+       background-color:Black;
+       //for transparency
+       opacity:0.6;
+    }
+    .timer {
+        text-align: center;
+    }
+    #popup_box  
+    {
+
+    position:absolute;
+
+        text-align: center;
+        top: 3%;
+        left: 0%;
+        height:50%;
+        width: 80%;
+        margin-top: 10%; /*set to a negative number 1/2 of your height*/
+        margin-left: 10%; /*set to a negative number 1/2 of your width*/
+        margin-right: 10%;
+        border: 1px solid #ccc;
+        border:  2px solid: lightgray;
+        z-index:100; 
+        background-color: green;
+    }
+
+    h1 {
+        text-align: center;
+    }
