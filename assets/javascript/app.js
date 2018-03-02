@@ -19,6 +19,7 @@ $(document).ready(function () {
     //hide hider and popup_box
     $("#hider").hide();
     $("#popup_box").show();
+    $(".number").hide();
 
     //on click show the hider div and the message
 
@@ -42,10 +43,29 @@ $(document).ready(function () {
     function stop() {
         $("popup_box").hide();
         $("#content").show();
+        $(".heading").replaceWith("<h1>Times Up!</h1><br>");
+        $(".subheading").replaceWith("<h2>Your Results:</h2>");
+        
     }
     function answers() {
-        if 
-    }
+        var amountCorrect = 0;          
+        for(var i = 1; i <= 4; i++) {
+        var radios = document.getElementsByName('q'+i);
+        
+        for(var j = 0; j < radios.length; j++) {
+        var radio = radios[j];
+
+        if(radio.value == "correct" && radio.checked) {
+        amountCorrect++;
+            var incorrect = 4 - amountCorrect;
+         }
+    
+  }
+ }      $(".number").show();             
+    $(".number").append("Correct: " + amountCorrect + "<br><br>");
+    $(".number").append("Incorrect: " + incorrect);
+  
+    };
 
     function count() {
         if (time > 0) {
@@ -60,10 +80,22 @@ $(document).ready(function () {
             $("#hider").show();
             time = 0;
             $("#buttonClose").hide();
-            $(".number").text("Results <br>" + "Corect Answers: " + correct + "<br>" + "Wrong Answers: " + wrong)
+       
          }
-    }
-  
+    };
+  $(".done").click(function() {
+    stop();
+    $("#hider").fadeIn("slow");
+    $('#popup_box').fadeIn("slow");
+    $("#hider").show();
+    time = 0;
+    $("#buttonClose").hide();
+    
+    $("#content").show();
+    $(".heading").replaceWith("<h1>Thanks for playing!</h1><br>");
+    $(".subheading").replaceWith("<h2>Your Results:</h2>");
+    answers(); 
+  });
 
     function timeConverter(t) {
 

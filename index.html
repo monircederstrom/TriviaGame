@@ -22,38 +22,38 @@ s<!DOCTYPE html>
                 <br><br>
             </div>
             <div class="pt3">
-                <div id="q1">
+                <div id="question">
                 <P>What was Aziz Ansari studying at NYU before he was Tom Haverford?<BR>
-                    <input type="radio" name="q1" value="a">pre-med
-                    <input type="radio" name="q1" value="b">psychology
-                    <input type="radio" name="q1" value="c">criminal justice
-                    <input type="radio" name="q1" value="d">business<BR><br>
+                    <input type="radio" name="q1" value="wrong">pre-med
+                    <input type="radio" name="q1" value="wrong">psychology
+                    <input type="radio" name="q1" value="wrong">criminal justice
+                    <input type="radio" name="q1" value="correct">business<BR><br>
                     </p>
                 </div>
-                <div id="q2">
+                <div id="question">
                        
                 <P>Parks and Recreation was originally meant to be a spin-off of which show?<BR>
-                    <input type="radio" name="q2" value="a">Friends
-                    <input type="radio" name="q2" value="b">The Office
-                    <input type="radio" name="q2" value="c">Trophy Wife
-                    <input type="radio" name="q2" value="d">Happy Endings<BR><br>
+                    <input type="radio" name="q2" value="wrong">Friends
+                    <input type="radio" name="q2" value="correct">The Office
+                    <input type="radio" name="q2" value="wrong">Trophy Wife
+                    <input type="radio" name="q2" value="wrong">Happy Endings<BR><br>
                     </p>
                  
                 </div>
-                <div id="q3">  
+                <div id="question">  
                 <P>Duke Silver and the character who plays him (Nick Offerman) are both skilled at playing what instrument?<BR>
-                    <input type="radio" name="q3" value="a">saxophone
-                    <input type="radio" name="q3" value="b">flute
-                    <input type="radio" name="q3" value="c">clarinet
-                    <input type="radio" name="q3" value="d">trumpet<BR><br>
+                    <input type="radio" name="q3" value="correct">saxophone
+                    <input type="radio" name="q3" value="wrong">flute
+                    <input type="radio" name="q3" value="wrong">clarinet
+                    <input type="radio" name="q3" value="wrong">trumpet<BR><br>
                     </p>
                 </div>
-                <div id="q4">
+                <div id="question">
                 <P> Which of the following was not a name that Jerry Gergich goes by in the show?<BR>
-                    <input type="radio" name="q4" value="a">Larry
-                     <input type="radio" name="q4" value="b">Gary
-                     <input type="radio" name="q4" value="c">Terry
-                     <input type="radio" name="q4" value="d">Barry
+                    <input type="radio" name="q4" value="wrong">Larry
+                     <input type="radio" name="q4" value="wrong">Gary
+                     <input type="radio" name="q4" value="wrong">Terry
+                     <input type="radio" name="q4" value="correct">Barry
                     </P>
                 </div>
                 <br>
@@ -62,13 +62,15 @@ s<!DOCTYPE html>
             </div>
         <div class="pt2">
             <div id="hider">Results</div>
-                <div id="popup_box">  <h1> Parks and Recreation Trivia! </h1>
-                    <h2>Press Start to begin</h2><br/>
+                <div id="popup_box">  <h1 class="heading"> Parks and Recreation Trivia! </h1>
+                    <h2 class="subheading">Press Start to begin</h2><br/>
                     <a id="buttonClose"><button>START</button></a>
+                    <div class="number"></div>
+                    
                 </div>    
                 <div id="content"><br />
                     <a id="showpopup"></a>
-                    <div class="number"></div>
+                    
                 </div>
             </div>
         </div>
