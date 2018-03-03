@@ -38,17 +38,22 @@ $(document).ready(function () {
             $('#popup_box').fadeIn("slow");
             $("#buttonClose").hide();
             stop();
+            
         }
     }
     function stop() {
         $("popup_box").hide();
         $("#content").show();
-        $(".heading").replaceWith("<h1>Times Up!</h1><br>");
+        $(".heading").replaceWith("<h1>THANKS FOR PLAYING!</h1><br>");
         $(".subheading").replaceWith("<h2>Your Results:</h2>");
+        clearInterval(intervalID);
         
     }
     function answers() {
-        var amountCorrect = 0;          
+        var amountCorrect = 0;   
+        var incorrect = 0;  
+        var blank = 0; 
+
         for(var i = 1; i <= 4; i++) {
         var radios = document.getElementsByName('q'+i);
         
@@ -56,14 +61,23 @@ $(document).ready(function () {
         var radio = radios[j];
 
         if(radio.value == "correct" && radio.checked) {
-        amountCorrect++;
-            var incorrect = 4 - amountCorrect;
+        amountCorrect++;    
          }
+         if(radio.value == "wrong" && radio.checked) {
+             incorrect++;
+         }
+        if(radio.checked == false) {
+            
+            blank++;
+            unanswered = blank - 12;
+            console.log(unanswered); 
+        }
     
   }
  }      $(".number").show();             
     $(".number").append("Correct: " + amountCorrect + "<br><br>");
-    $(".number").append("Incorrect: " + incorrect);
+    $(".number").append("Incorrect: " + incorrect + "<br><br>");
+    $(".number").append("Unanswered: " + unanswered)
   
     };
 
@@ -80,6 +94,7 @@ $(document).ready(function () {
             $("#hider").show();
             time = 0;
             $("#buttonClose").hide();
+            answers();
        
          }
     };

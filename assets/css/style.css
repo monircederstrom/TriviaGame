@@ -8,8 +8,8 @@
 
 .pt1 {
     background-color: green;
-    height: 50%;
-    margin-top: 10%;
+    height: 46%;
+    margin-top: 13%;
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 1%;
@@ -25,8 +25,8 @@
         top: 0%;
         left: 0%;
     
-        height:50%;
-        margin-top: 10%; /*set to a negative number 1/2 of your height*/
+        height: 46%;
+        margin-top: 13%; /*set to a negative number 1/2 of your height*/
         margin-left:10%; /*set to a negative number 1/2 of your width*/
         margin-right: 10%;
         /*
@@ -48,9 +48,9 @@
         text-align: center;
         top: 3%;
         left: 0%;
-        height:50%;
+        height:46%;
         width: 80%;
-        margin-top: 10%; /*set to a negative number 1/2 of your height*/
+        margin-top: 13%; /*set to a negative number 1/2 of your height*/
         margin-left: 10%; /*set to a negative number 1/2 of your width*/
         margin-right: 10%;
         border: 1px solid #ccc;
